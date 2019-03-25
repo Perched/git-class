@@ -199,19 +199,7 @@
     method: PUT
     url: "http://{{ inventory_hostname }}:9200/_template/bro_network"
 #            when: "'primary-servers' in group_names and bro_detectionMapping is defined and bro_detectionMapping.status == ''"
-#
-#- name: "Check for Bro observations mapping template"
-#                uri:
-#                  method: GET
-#                  url: "http://{{ inventory_hostname }}:9200/_template/bro_observations"
-#                failed_when: false
-#                register: bro_observationsMapping
-#                when: "'primary-servers' in group_names"
-#
-- name: "Load Bro Elasticsearch observations mapping template"
-  uri:
-    body: "{{ lookup('file', 'es-bro-observations-mappings.json')}}"
-    body_format: json
+#NOT IMPORTANT
     method: PUT
     url: "http://{{ inventory_hostname }}:9200/_template/bro_observations"
 #                when: "'primary-servers' in group_names and bro_observationsMapping is defined and bro_observationsMapping.status == ''"
