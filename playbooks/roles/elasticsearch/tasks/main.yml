@@ -215,3 +215,5 @@
     method: PUT
     url: "http://{{ inventory_hostname }}:9200/_template/bro_observations"
 #                when: "'primary-servers' in group_names and bro_observationsMapping is defined and bro_observationsMapping.status == ''"
+
+aoeu
