@@ -3,6 +3,10 @@
 ######################################################
 ---
 
+- name: I like adding code
+  debug:
+    msg: "Here is my wonderful new code"
+
 - name: Install Suricata package
   yum:
     name: suricata
